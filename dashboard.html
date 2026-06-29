@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Dashboard</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="dashboard">
+
+<h1>Welcome</h1>
+
+<h3 id="userEmail"></h3>
+
+<button onclick="logout()">
+Logout
+</button>
+
+</div>
+
+<script>
+
+if(
+!localStorage.getItem("loggedInUser")
+){
+window.location="index.html";
+}
+
+document.getElementById(
+"userEmail"
+).innerText=
+localStorage.getItem(
+"loggedInUser"
+);
+
+function logout(){
+
+localStorage.removeItem(
+"loggedInUser"
+);
+
+window.location="index.html";
+}
+
+</script>
+
+</body>
+</html>

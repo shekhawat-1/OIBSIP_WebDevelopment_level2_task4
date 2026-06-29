@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Authentication System</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+
+<h2>Register</h2>
+
+<input type="email"
+id="regEmail"
+placeholder="Email">
+
+<input type="password"
+id="regPassword"
+placeholder="Password">
+
+<div class="password-tools">
+<button onclick="togglePassword('regPassword')">
+Show
+</button>
+</div>
+
+<div id="strength"></div>
+
+<button onclick="register()">
+Register
+</button>
+
+<hr>
+
+<h2>Login</h2>
+
+<input type="email"
+id="loginEmail"
+placeholder="Email">
+
+<input type="password"
+id="loginPassword"
+placeholder="Password">
+
+<label>
+<input type="checkbox"
+id="rememberMe">
+Remember Me
+</label>
+
+<button onclick="login()">
+Login
+</button>
+
+<button id="themeBtn">
+🌙 Dark Mode
+</button>
+
+<p id="message"></p>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
